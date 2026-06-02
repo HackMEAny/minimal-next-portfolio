@@ -4,18 +4,15 @@ export const siteConfig = {
   username: "HackMEAny",
   description:
     "Aniket Das - Applied AI Engineer working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions in software development and AI.",
-  url: "https://www/anik3t.dev",
+  url: "https://www.anik3t.dev",
   links: {
     twitter: "https://x.com/Aniket10702843",
     github: "https://github.com/hackmeany",
-    // templateRepo: "https://github.com/namanbarkiya/minimal-next-portfolio",
+    templateRepo: "",
   },
-  // ogImage:
-  //   "https://res.cloudinary.com/dvt5vkfwz/image/upload/v1767384721/naman_portfolio_og_image.png",
-  // iconIco:
-  //   "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357384/assets/naman-favicon.ico",
-  // logoIcon:
-  //   "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357294/assets/naman-logo.png",
+  ogImage: "",
+  iconIco: "",
+  logoIcon: "",
   keywords: [
     "Aniket Das",
     "Full Stack Developer",
