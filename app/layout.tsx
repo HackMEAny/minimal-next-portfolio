@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/app/globals.css";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter as FontSans } from "next/font/google";
@@ -133,7 +133,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </ThemeProvider>
         <Script
           src="https://convot.xyz/widget.js"
-          data-token="3vpr28Va7E8luRq8DMOStAr9tefOCVqifQ28fpp6grrKS4zflNRZQjQpmeu4os_2nuLmmh1DOshndiN5O1vvGg"
+          data-token="cZD_ntdVP9nppVUJTcJHFmvdGku2xZd9KyvwVfcO7E7BshJDiOGORHRdKhG5WSyJMq6nKMxrLbC3Jm3HvFhG6w"
           data-api-url="https://api.convot.xyz"
           strategy="afterInteractive"
         />

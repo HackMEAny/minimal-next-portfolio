@@ -29,14 +29,14 @@ export interface ProjectInterface {
 
 export const Projects: ProjectInterface[] = [
   {
-    id: "portfolio-template",
-    companyName: "Portfolio Website (130+ GitHub stars)",
-    type: "Personal",
-    category: ["Web Dev", "Frontend", "UI/UX"],
+    id: "hotel",
+    companyName: "Hotel Sweet Home",
+    type: "Professional",
+    category: ["Web Dev", "Full Stack", "UI/UX"],
     shortDescription:
-      "Open-source Next.js portfolio template recognized and forked by developers worldwide, optimized for SEO/AEO and performance.",
-    websiteLink: "https://nbarkiya.xyz",
-    githubLink: "https://github.com/namanbarkiya/minimal-next-portfolio",
+      "Website for Hotel Sweet Home International in Darjeeling, optimized for SEO/AEO and performance.",
+    websiteLink: "https://hotelsweethomeinternational.com",
+    // githubLink: "https://github.com/namanbarkiya/minimal-next-portfolio",
     techStack: [
       "Next.js",
       "React",
@@ -44,549 +44,302 @@ export const Projects: ProjectInterface[] = [
       "Tailwind CSS",
       "Framer Motion",
       "Vercel",
+      "AWS",
+      "Cloudflare",
+      "Docker",
     ],
-    startDate: new Date("2024-01-01"),
+    startDate: new Date("2025-02-01"),
     endDate: new Date("2025-12-01"),
-    companyLogoImg: "/projects/portfolio/logo.png",
+    companyLogoImg: "/projects/hotel/image.png",
     pagesInfoArr: [
       {
         title: "Landing & Sections",
         description:
-          "A clean, minimal landing page with sections for skills, projects, contributions, and experience.",
-        imgArr: ["/profile-img.jpg"],
+          "A modern, high-performance travel website built with Next.js and Tailwind CSS for a fast, responsive, and SEO-optimized booking experience.",
+        imgArr: ["/projects/hotel/rooms.png"],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "I created an open-source Next.js portfolio template to help developers ship a modern, responsive portfolio quickly.",
-        "The project focuses heavily on performance, clean typography, and strong SEO/AEO foundations, and it has been adopted and forked by developers globally.",
+        "The website for Hotel Sweet Home International (Darjeeling) is built with a modern, high-performance tech stack focused on speed and SEO. Based on its structure and characteristics, here is a description of its technology.",
       ],
       bullets: [
-        "Created an open-source Next.js portfolio template recognized and forked by developers worldwide.",
-        "Ranked #1 on ChatGPT search for “best Next.js portfolio template GitHub” through AEO/GEO optimization.",
-        "Maintained a fast, responsive UI with a minimal, themeable design system.",
+        "The site is built using Next.js, a popular React-based framework. This is evident from the page routing structure and the fast, seamless transitions between sections. Next.js allows the site to use Server-Side Rendering (SSR) or Static Site Generation (SSG), which ensures that the hotel’s room details and images load quickly for users.",
+        "The website utilizes Tailwind CSS for its styling. This utility-first framework allows for the clean, mobile-responsive layout seen on the site, ensuring it looks professional on both desktops and smartphones.",
+        "The site uses modern image formats (like WebP) and responsive image loading to showcase high-quality photos of the Darjeeling property without sacrificing site speed.",
       ],
     },
   },
   {
-    id: "convot",
-    companyName: "Convot",
-    type: "Personal",
-    category: ["Full Stack", "Backend", "Web Dev"],
+    id: "dipsagency",
+    companyName: "Dips Agency",
+    type: "Professional",
+    category: ["Full Stack", "Frontend", "Web Dev"],
+    websiteLink: "https://dips.agency",
     shortDescription:
-      "Production-ready AI chatbot platform that crawls, indexes, and embeds knowledge from PDFs/URLs/text to deliver source-grounded answers via a one-line widget.",
-    techStack: ["Next.js", "React", "Node.js", "Typescript", "Python"],
+      "A minimalist, high-speed logistics landing page built with Next.js and Tailwind CSS, optimized for a mobile-first professional user experience.",
+    techStack: ["Next.js", "React", "Node.js", "Typescript", "Firebase"],
     startDate: new Date("2024-04-01"),
     endDate: new Date("2024-10-01"),
-    companyLogoImg: "/projects/convot/logo.png",
+    companyLogoImg: "/projects/dipsagency/logo.png",
     pagesInfoArr: [
       {
         title: "Ingestion & Retrieval",
         description:
-          "Designed ingestion and retrieval pipelines supporting multiple content sources with secure tenant isolation.",
-        imgArr: ["/logo.png"],
+          "The website for Dips Agency (a shipping and logistics service based in Haldia) uses a streamlined, modern tech stack designed for a clean, single-page professional presence.",
+        imgArr: ["/projects/dipsagency/image.png"],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "Convot is a production-ready AI chatbot platform designed to be embedded on any website with a single line widget.",
-        "It supports crawling and indexing knowledge from PDFs, URLs, and plain text, and it returns context-aware, source-grounded answers with integrated analytics.",
+        "The website for Dips Agency (a shipping and logistics service based in Haldia) uses a streamlined, modern tech stack designed for a clean, single-page professional presence.",
       ],
       bullets: [
-        "Built a production-ready AI chatbot platform with integrated analytics and a one-line embed widget.",
-        "Designed ingestion and retrieval pipelines to support multiple sources (PDFs, URLs, text) with tenant isolation.",
-        "Focused on reliability, security, and traceable answers by grounding responses in retrieved sources.",
+        "Frontend Framework: Next.js (React-based). The site is built as a fast-loading, single-page application (SPA) that utilizes server-side rendering for improved performance.",
+        "Styling: Tailwind CSS. The layout uses utility-first CSS, evidenced by the responsive design, modern spacing, and clean typography typical of Tailwind-based projects.",
+        "Icons & Graphics: Lucide React or similar SVG-based icon libraries for clean, lightweight visual elements.",
+        "Deployment & Hosting: Likely hosted on Vercel, which is the standard platform for Next.js applications, providing high speed and global availability.",
+        "Development: The site is a custom build rather than a generic template, focusing on a minimal 'vibe' that highlights speed and reliability.",
       ],
     },
   },
   {
-    id: "niya-saas-template",
-    companyName: "Niya SaaS Template (30+ GitHub stars)",
-    type: "Personal",
+    id: "screen-protection",
+    companyName: "Screen Protection — HDMI Splitter Detection",
+    type: "Professional",
     category: ["Full Stack", "Web Dev", "UI/UX"],
     shortDescription:
-      "Production-ready Next.js 15 template for developers and AI startups. Includes authentication, state management, beautiful UI components, and everything needed to build scalable SaaS applications.",
+      "An advanced hardware-integrity API that uses EDID fingerprinting, HDCP handshakes, and Widevine probing to detect HDMI unauthorized devices and generate a weighted security risk score.",
     websiteLink: "https://niya.nbarkiya.xyz",
-    githubLink: "https://github.com/namanbarkiya/niya-saas-template",
-    techStack: ["Next.js", "React", "Typescript", "Supabase", "Tailwind CSS"],
-    startDate: new Date("2024-08-01"),
-    endDate: new Date("2025-01-01"),
-    companyLogoImg: "/projects/niya/logo.png",
+    githubLink: "https://github.com/HackMEAny/Screen-Cast-Detect",
+    techStack: ["Spring Boot", "Java", "HTML 5"],
+    startDate: new Date("2026-02-26"),
+    endDate: new Date("2026-03-02"),
+    companyLogoImg: "/projects/screen-protection/logo.png",
     pagesInfoArr: [
       {
-        title: "Landing Page",
+        title: "Technology Stack",
         description:
-          "Modern landing page showcasing the template features, tech stack, and pricing options.",
-        imgArr: ["/logo.png"],
+          "Spring Boot 3.x (Java), JNI (Java Native Interface) to call low-level Windows/Linux display APIs, OPM (Output Protection Manager) & DXGI (DirectX Graphics Infrastructure), RESTful Endpoints with WebSocket support for real-time probing",
+        imgArr: [],
       },
       {
-        title: "Authentication System",
-        description:
-          "Complete authentication system with Supabase, protected routes, and role-based access control.",
-        imgArr: ["/logo.png"],
-      },
-      {
-        title: "Dashboard & Components",
-        description:
-          "Beautiful UI components with Magic UI, Radix primitives, and comprehensive dashboard templates.",
-        imgArr: ["/logo.png"],
+        title: "Architecture",
+        description: "",
+        imgArr: ["/projects/screen-protection/image.png"],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "Niya is a production-ready Next.js 15 template designed for developers and AI startups. Built with modern best practices, it includes everything needed to build scalable SaaS applications.",
-        "The template features a complete authentication system with Supabase, beautiful UI components with Magic UI and Radix primitives, state management with Zustand and React Query, and full TypeScript support with Zod validation.",
-        "It's optimized for performance, includes SEO-friendly metadata, and provides a solid foundation for rapid prototyping and production deployment.",
+        "This Spring Boot REST API serves as a high-security Display Integrity & Content Protection Service. It is designed to prevent content piracy and unauthorized screen recording by identifying hardware-level bypasses like HDMI 'strippers' or unauthorized capture cards.",
+        "Core Mechanism: Multi-Layer Signal Analysis",
+        "The system moves beyond simple software checks by analyzing the physical and cryptographic properties of the display chain:",
       ],
       bullets: [
-        "Created a production-ready Next.js 15 template with complete authentication system and protected routes.",
-        "Integrated Supabase for database, authentication, and real-time features with full TypeScript support.",
-        "Built comprehensive UI component library with Magic UI, Radix primitives, and Tailwind CSS styling.",
-        "Implemented state management with Zustand for client state and React Query for server state management.",
-        "Designed for developers and AI startups with all essential features to start building SaaS products.",
-        "Achieved 30+ GitHub stars and recognition as a comprehensive starter template for modern web applications.",
+        "EDID Fingerprinting: Extracts the Extended Display Identification Data to verify the display's 'birth certificate.' It checks for manufacturer inconsistencies or generic IDs common in 'ghost' display emulators and splitters.",
+        "OPM & HDCP Handshake: Executes a full Output Protection Manager (OPM) cryptographic challenge. By forcing a hardware-level HDCP (High-bandwidth Digital Content Protection) handshake, the API can detect if the encryption is being terminated early or 'stripped' by a middleman device.",
+        "Display Topology Analysis: Maps the connection tree. It detects if a single signal is being mirrored or split across multiple downstream sinks (topology 'branching'), which is a hallmark of unauthorized redistribution.",
+        "Widevine DRM Probing: Uses browser-level hooks to check for Widevine L1/L3 security levels. If a hardware device degrades the DRM path to a lower security level, it signals a compromised environment.",
       ],
     },
   },
   {
-    id: "portfolio-card",
-    companyName: "Portfolio Card",
+    id: "birthday-card",
+    companyName: "Birthday Card",
     type: "Personal",
-    category: ["Web Dev", "Frontend", "3D Modeling"],
+    category: ["Web Dev", "Frontend"],
     shortDescription:
-      "Forged an immersive 3D Portfolio Card utilizing the prowess of Three.js and Blender, where art and technology converge in an interactive masterpiece.",
-    websiteLink: "https://card.namanbarkiya.xyz/",
-    githubLink: "https://github.com/namanbarkiya/3d-portfolio-card",
-    techStack: ["React", "Javascript", "HTML 5", "CSS 3"],
+      "This website appears to be a personalized birthday celebration page created as a digital greeting.",
+    websiteLink: "https://birthdaydeyasini.anik3t.dev/",
+    githubLink: "https://github.com/HackMEAny/birthday-card",
+    techStack: ["React", "Next.js"],
     startDate: new Date("2022-03-01"),
     endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/card/logo.png",
+    companyLogoImg: "/projects/birthday-card/logo.png",
     pagesInfoArr: [
       {
-        title: "Card Views",
-        description: "Front and back views of the interactive 3D card",
-        imgArr: ["/projects/card/card_2.webp", "/projects/card/card_3.webp"],
-      },
-      {
-        title: "Interactive Elements",
-        description:
-          "Custom links embedded in the 3D model with interactive animations",
-        imgArr: ["/projects/card/card_1.webp"],
-      },
-      {
-        title: "3D Model Development",
-        description: "Blender project showcasing the model creation process",
-        imgArr: ["/projects/card/card_4.webp"],
+        title: "Webpage View",
+        description: "Mobile & Desktop view",
+        imgArr: [
+          "/projects/birthday-card/logo.png",
+          "/projects/birthday-card/image.png",
+        ],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "In my personal, I've ventured into the world of creativity, fashioning a distinctive portfolio card through the utilization of Three.js.",
-        "This portfolio card transcends convention; it emerges as a captivating 3D model, adorned with meticulous lighting arrangements that conjure a spellbinding visual journey.",
-        "To materialize this concept, I've harnessed the combined potential of Three.js and Blender, orchestrating a meticulous crafting of the central 3D model that serves as the cornerstone of the card's allure.",
-        "Yet, the allure extends beyond aesthetics. I've ingeniously interwoven custom links directly into the fabric of Three.js components. Through the creation and seamless integration of novel components, these additions elegantly rest upon the card's surface, mirroring its rotations and delivering an interactive dimension to my portfolio.",
-        "The portfolio card itself is an opus of motion, perpetually swaying in an auto-rotational dance that unfurls its multifaceted essence. As an enhancement, I've introduced an instinctive user interaction element. A simple, intuitive drag of the card in specific directions grants viewers a comprehensive vantage, enabling exploration from every conceivable angle.",
-        "At its core, my personal epitomizes technical finesse, artistic expression, and interactive design. The amalgamation of Three.js, Blender's prowess, and the innovation of component integration has birthed not only a portfolio card, but a dynamic encounter leaving an indelible imprint on all who partake.",
+        "Typically, such sites are built as lightweight, single-page interactive experiences (often featuring photos, animations, a timer, or a custom message) designed to deliver a personalized sentiment for a specific individual.",
       ],
       bullets: [
-        "Conceptualized and realized a distinct portfolio card using Three.js, highlighting creative exploration.",
-        "Crafted a mesmerizing 3D model enhanced by thoughtful lighting arrangements, resulting in a captivating visual voyage.",
-        "Leveraged the synergy of Three.js and Blender to meticulously sculpt and refine the central 3D model, embodying meticulous attention to detail.",
-        "Innovatively integrated custom links within Three.js components, introducing an interactive layer via seamlessly incorporated new elements.",
-        "Enabled an auto-rotating feature for the portfolio card, perpetually showcasing its various facets to observers.",
-        "Introduced an instinctual user interaction mechanism, allowing viewers to comprehensively explore the card's dimensions through simple, intuitive dragging motions.",
-        "Represented a fusion of technical prowess, artistic ingenuity, and interactive design in a project that reshapes the boundaries of conventional portfolio representation.",
+        "Tech Stack: A lightweight Next.js application, likely hosted on Firebase.",
+        "Purpose: A bespoke, sentimental web project that demonstrates simple frontend development skills (CSS animations, responsive design, and image embedding) tailored for a personal occasion.",
+        "Upload PDF & ready to go",
       ],
     },
   },
   {
-    id: "the-super-focus",
-    companyName: "TheSuperFocus",
+    id: "smart_lms",
+    companyName: "Smart LMS",
     type: "Personal",
-    category: ["Full Stack", "Web Dev", "UI/UX"],
+    category: ["Backend", "UI/UX"],
     shortDescription:
-      "Pomodoro-inspired productivity web app with real-time sessions and recurring payments.",
-    techStack: [
-      "Next.js",
-      "React",
-      "Node.js",
-      "Socket.io",
-      "Typescript",
-      "MongoDB",
-    ],
-    startDate: new Date("2023-06-01"),
-    endDate: new Date("2023-12-01"),
-    companyLogoImg: "/logo.png",
+      "Streamlining library operations through a clean, Swing-powered desktop app for librarians and members",
+    techStack: ["Java", "Git"],
+    startDate: new Date("2021-02-01"),
+    endDate: new Date("2021-03-01"),
+    companyLogoImg: "/projects/smart_lms/image.png",
     pagesInfoArr: [
       {
-        title: "Realtime Focus Sessions",
+        title: "🖥️ Java Swing Desktop Architecture",
         description:
-          "Built real-time focus sessions using sockets to help people stay accountable and productive.",
-        imgArr: ["/logo.png"],
+          "Built with Java SE (JDK 15+) and Swing UI, featuring modular MVC-like separation: role-based GUIs (Librarian/Member), custom components (GradientPanel), and event-driven workflows for borrowing, returns, and user management.",
+        imgArr: [],
+      },
+      {
+        title: "💾 Hybrid File-Based Persistence",
+        description:
+          "Uses JSON (dtb-member.json, dtb-array.json) for structured data storage and CSV fallback for compatibility, with shutdown hooks for safe writes—no external database required, making it lightweight and portable.",
+        imgArr: [],
+      },
+      {
+        title: "🛠️ Developer-Ready Tooling",
+        description:
+          "Developed in NetBeans 12+ with Ant build (build.xml), packaged as an executable JAR (dist/LMS.jar), includes basic unit tests (test/LMS_Test), and follows Git-friendly contribution workflows (fork → branch → PR).",
+        imgArr: [],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "TheSuperFocus is a productivity web app inspired by the Pomodoro technique, built to help users stay focused and complete deep-work sessions.",
-        "It includes real-time session support and a paid tier with recurring billing.",
+        "A desktop-based Library Management System designed to streamline book issuance, returns, and user management for educational institutions. Built with Java (JDK 15+) and developed in NetBeans, Smart_LMS features role-based interfaces for librarians and members, enabling efficient tracking of books, user profiles, borrowing history, and payment records.",
+        "Key Features:",
       ],
       bullets: [
-        "Built a Pomodoro-inspired productivity web app using real-time sockets.",
-        "Integrated Razorpay for recurring payments, securing 10+ premium users.",
+        "🔐 Secure user registration & authentication",
+        "👥 Dual GUI: Librarian dashboard (add/manage books, view member details) + Member portal (browse, borrow, track payments)",
+        "💾 Local JSON/CSV-based data persistence",
+        "🎨 Clean Swing-based UI with loading screens, forms, and data tables",
+        "🛠️ Modular architecture with test coverage",
       ],
     },
   },
   {
-    id: "built-design",
-    companyName: "Builtdesign",
-    type: "Professional",
-    category: ["Web Dev", "Full Stack", "UI/UX"],
+    id: "metadata-delete",
+    companyName: "🔒 Metadata Delete",
+    type: "Personal",
+    category: ["Backend"],
     shortDescription:
-      "Developed and optimized a high-performing website catering to over 4000 users, emphasizing efficiency and maintainability.",
-    websiteLink: "https://builtdesign.in",
-    techStack: [
-      "Next.js",
-      "React",
-      "Node.js",
-      "MongoDB",
-      "GraphQL",
-      "Nest.js",
-      "Typescript",
-    ],
+      "A lightweight Python script that strips EXIF and embedded metadata from image files to protect user privacy before sharing online.",
+    githubLink: "https://github.com/HackMEAny/Metadata-Delete",
+    techStack: ["Python", "Linux"],
     startDate: new Date("2021-07-01"),
     endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/builtdesign/logo.png",
+    companyLogoImg: "/projects/metadata-delete/image.png",
     pagesInfoArr: [
       {
-        title: "Landing Page",
-        description:
-          "Modern and responsive landing page showcasing company services and portfolio",
-        imgArr: [
-          "/projects/builtdesign/landing_1.webp",
-          "/projects/builtdesign/landing_3.webp",
-          "/projects/builtdesign/landing_5.webp",
-          "/projects/builtdesign/landing_6.webp",
-          "/projects/builtdesign/landing_2.webp",
-          "/projects/builtdesign/landing_4.webp",
-        ],
+        title: "Tech Stack",
+        description: "Python 3.x, Pillow (PIL), MIT License",
+        imgArr: [],
       },
       {
-        title: "Custom PDF Reader and optimizer",
-        description:
-          "Specialized PDF viewer with optimization features for improved performance and user experience",
-        imgArr: ["/projects/builtdesign/pdf_opt.webp"],
+        title: "Before Deleting ( Raw Metadata )",
+        description: "Contain several sensitive data like location, phone, etc",
+        imgArr: ["/projects/metadata-delete/Before_Deleting.png"],
       },
       {
-        title: "Clients Dashboard",
-        description:
-          "Comprehensive client portal with project tracking, document management, and communication tools",
-        imgArr: [
-          "/projects/builtdesign/cli_dashboard_1.webp",
-          "/projects/builtdesign/cli_dashboard_2.webp",
-          "/projects/builtdesign/cli_dashboard_3.webp",
-        ],
-      },
-      {
-        title: "Admin Dashboard",
-        description:
-          "Powerful administrative interface for managing users, projects, and system settings",
-        imgArr: ["/projects/builtdesign/logo.png"],
+        title: "After Deleting",
+        description: "No personal information exposed",
+        imgArr: ["/projects/metadata-delete/After.png"],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "During my time at Builtdesign, I had the opportunity to work on a dynamic and user-focused project that involved designing and optimizing a website catering to a user base of over 4000 individuals. My role as a full-stack web developer was to ensure a seamless experience for users by creating an efficient and maintainable platform.",
-        "I collaborated closely with the product team to integrate cutting-edge features, employing technologies like Next.js and React with TypeScript for captivating front-end experiences. Additionally, I contributed significantly to the backend by utilizing Node.js, MongoDB, and GraphQL to design robust APIs and ensure smooth system functionality.",
-        "This experience allowed me to enhance my skills in various areas of web development and deliver a high-quality product. I gained proficiency in front-end technologies such as Material UI and Tailwind CSS, as well as backend technologies including Nest.js and MySQL. The project's success in catering to a large user base and providing an intuitive user interface has further motivated me to pursue excellence in web development.",
+        "Metadata-Delete is a focused privacy utility designed to remove sensitive metadata (EXIF, GPS coordinates, device info, timestamps) from image files before they are shared publicly. Built with Python 3 and common imaging libraries, this tool helps users mitigate unintentional data leakage — a critical concern for journalists, activists, photographers, and privacy-conscious individuals.",
+        "Why It Matters:",
+        "When you share a photo online, hidden metadata can reveal your location, device model, software used, and even editing history GitHub. This script provides a simple, offline-first solution to sanitize images without altering visual quality",
+        "Key Features:",
       ],
       bullets: [
-        "Developed and optimized a high-performing website catering to over 4000 users.",
-        "Collaborated closely with the product team to implement cutting-edge features.",
-        "Created an intuitive admin dashboard to efficiently manage and announce contest winners.",
-        "Leveraged Next.js, React with TypeScript for captivating front-end experiences.",
-        "Utilized Node.js, MongoDB, and GraphQL to design and manage databases.",
+        "🧹 Removes EXIF, IPTC, and XMP metadata blocks from JPEG/PNG images.",
+        "📍 Strips geolocation data to prevent location tracking.",
+        "🔒 Offline execution — no cloud upload, ensuring file confidentiality.",
+        "🖼️ Preserves image dimensions and visual fidelity during cleanup.",
+        "🧪 Includes before/after validation screenshots for transparency.",
+        "⚙️ Simple CLI workflow: `python3 MetaData_Remover.py`",
       ],
     },
   },
   {
-    id: "the-super-quotes",
-    companyName: "The Super Quotes",
-    type: "Professional",
-    category: ["Mobile Dev", "Full Stack", "UI/UX"],
-    shortDescription:
-      "Elevated The Super Quotes app with JavaScript, React Native, APIs, Redux magic, and Google Play Store debut.",
-    websiteLink:
-      "https://play.google.com/store/apps/details?id=com.thesuperlife",
-    techStack: ["React Native", "Node.js", "MongoDB", "Javascript"],
-    startDate: new Date("2021-07-01"),
-    endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/superquotes/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Quotes View Page",
-        description:
-          "Elegantly designed quotes display with customizable themes and sharing options",
-        imgArr: ["/projects/superquotes/app_2.webp"],
-      },
-      {
-        title: "Quotes Download Component",
-        description:
-          "Feature allowing users to download quotes as beautiful images for social media sharing",
-        imgArr: [
-          "/projects/superquotes/app_4.webp",
-          "/projects/superquotes/app_7.webp",
-        ],
-      },
-      {
-        title: "Account Management",
-        description:
-          "User profile management with favorites, history, and personalization settings",
-        imgArr: ["/projects/superquotes/app_6.webp"],
-      },
-      {
-        title: "Interest Selection and Update Page",
-        description:
-          "Interactive interface for users to select and update their quote preferences and interests",
-        imgArr: [
-          "/projects/superquotes/app_1.webp",
-          "/projects/superquotes/app_3.webp",
-        ],
-      },
-      {
-        title: "Responsiveness",
-        description:
-          "Adaptive design ensuring optimal user experience across various device sizes and orientations",
-        imgArr: ["/projects/superquotes/app_5.webp"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        `Venturing into the world of creativity at The Super Quotes was an exhilarating journey. As a passionate developer, I led the charge in crafting a compelling application from inception to completion, using the dynamic duo of JavaScript and React Native.`,
-        `The heart of my achievement lay in the seamless integration of APIs, threading a tapestry of data flow that propelled the application's functionality to new heights.`,
-        `With the wizardry of Redux, I choreographed a symphony of state management and performance optimization, orchestrating a ballet of responsiveness that wowed users with every interaction.`,
-        `A crescendo awaited as I unveiled the culmination of my work on the grand stage of the Google Play Store. The app's debut marked an epoch, opening doors to an expansive audience eager to embrace the charm of The Super Quotes.`,
-      ],
-      bullets: [
-        "Led the end-to-end development of a captivating application using JavaScript and React Native.",
-        "Championed the integration of APIs, harmonizing data flow and enhancing application functionality.",
-        "Conducted Redux magic to ensure state management and optimize performance, delivering a mesmerizing user experience.",
-        "Premiered the application on the Google Play Store, capturing hearts and expanding its user base.",
-      ],
-    },
-  },
-  {
-    id: "apex-shopping",
-    companyName: "Apex Shopping App",
+    id: "googlemeet-automate",
+    companyName: "Smart Meeting Attendance",
     type: "Personal",
     category: ["Mobile Dev", "Full Stack", "UI/UX"],
     shortDescription:
-      "Developed a feature-rich mobile shopping application with admin panel, user authentication, and seamless product management using React Native and Firebase.",
-    githubLink: "https://github.com/namanbarkiya/apex-shopping-app",
-    techStack: ["React Native", "Javascript", "Redux", "Node.js", "express.js"],
+      "A Python script that automates Google Meet session joining using Selenium, designed to streamline attendance for online classes and scheduled meetings.",
+    githubLink: "https://github.com/HackMEAny/GoogleMeet_Automate",
+    techStack: ["Python"],
+    startDate: new Date("2020-12-01"),
+    endDate: new Date("2021-08-31"),
+    companyLogoImg: "/projects/googlemeet-automate/logo.png",
+    pagesInfoArr: [
+      {
+        title: "Tech Stack",
+        description:
+          "Python 3.x, Selenium WebDriver, ChromeDriver, Batch scripting, MIT License",
+        imgArr: ["/projects/googlemeet-automate/demo.gif"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        `GoogleMeet_Automate is a lightweight automation utility built with Python and Selenium WebDriver to programmatically join Google Meet sessions. Originally designed to help students never miss scheduled online classes GitHub, this tool demonstrates practical application of web automation, credential handling, and browser interaction workflows.`,
+        "How It Works:",
+        "The script leverages Selenium to control a Chrome browser instance, navigate to Google Meet, authenticate via Gmail (user-configured), and join meetings at predefined times — reducing manual effort and human error in attendance tracking.",
+        "Key Features:",
+      ],
+      bullets: [
+        "🕒 Schedule-based auto-join: Configure meeting links, times, and credentials in GoogleMeet.py",
+        "🌐 Selenium-driven browser automation for reliable Google Meet interaction",
+        "🔐 Local config file for secure, user-controlled credential management",
+      ],
+    },
+  },
+  {
+    id: "qwinos",
+    companyName: "Q OS",
+    type: "Personal",
+    category: ["Backend"],
+    shortDescription:
+      "A collection of modular Bash scripts for automating Artix Linux installation — supporting bare-metal, chroot, and complete deployment workflows.",
+    githubLink: "https://github.com/QWinOS/Q-OS",
+    techStack: ["Shell ( Bash / Zsh )", "DevOps"],
     startDate: new Date("2021-07-14"),
     endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/apex/logo.png",
+    companyLogoImg: "/projects/qwinos/image.png",
     pagesInfoArr: [
       {
-        title: "Splash Screen",
-        description: "Custom animated splash screen with app branding",
-        imgArr: ["/projects/apex/app_7.webp"],
-      },
-      {
-        title: "Login/Signup Authentication",
-        description: "Secure user authentication system with Firebase",
-        imgArr: ["/projects/apex/app_1.webp"],
-      },
-      {
-        title: "All Products Explore Screen",
-        description: "Interactive product browsing with categories and filters",
-        imgArr: ["/projects/apex/app_3.webp"],
-      },
-      {
-        title: "Admin Panel",
+        title: "Tech Stack:",
         description:
-          "Comprehensive admin dashboard for product and order management",
-        imgArr: ["/projects/apex/app_4.webp", "/projects/apex/app_6.webp"],
-      },
-      {
-        title: "Sidenav Navigation",
-        description: "Intuitive side navigation for easy app navigation",
-        imgArr: ["/projects/apex/app_5.webp"],
-      },
-      {
-        title: "Firebase Database",
-        description:
-          "Real-time database structure for efficient data management",
-        imgArr: ["/projects/apex/db.webp"],
+          "Bash/Shell scripting, Artix/Arch Linux package management (pacman), chroot environments, MIT License",
+        imgArr: [],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "The Apex Shopping App represents a comprehensive mobile e-commerce solution that I developed from the ground up using React Native and Firebase. This project showcases my ability to create a full-featured shopping application with both user and admin functionalities.",
-        "The application features a robust authentication system, allowing users to securely sign up and log in. The product exploration interface is designed with user experience in mind, incorporating smooth navigation and intuitive filtering options.",
-        "One of the key highlights is the admin panel, which provides complete control over product management, order processing, and inventory tracking. The integration with Firebase ensures real-time data synchronization and reliable data persistence.",
-        "The app's architecture emphasizes scalability and performance, utilizing Redux for state management and following best practices for mobile app development. The UI/UX design focuses on providing a seamless shopping experience across different device sizes.",
+        "Q-OS is a lightweight, open-source automation toolkit built entirely in Shell script to streamline the installation and configuration of Arch/Artix Linux — a lightweight, init-flexible Arch-based distribution. Designed for developers and system enthusiasts who value reproducibility and minimalism, this project provides ready-to-use scripts for multiple installation scenarios.",
+        "How It Works:",
+        "The repository includes purpose-built scripts for different deployment needs:",
+        "-> Bare_Install.sh → Minimal base system setup with optimized pacman mirror lists",
+        "-> Chroot_Install.sh / Chroot_Artix.sh → Chroot environment configuration for advanced customization",
+        "-> Complete_Install.sh → Full-featured installation with parallel downloads, xdg-user-dirs, and desktop-ready defaults",
+        "-> Bare_Install_Artix.sh → Specialized workflow for Artix-specific init systems (OpenRC, dinit, runit)",
+        "Key Features:",
       ],
       bullets: [
-        "Implemented secure user authentication and authorization using Firebase",
-        "Designed and developed an intuitive product browsing and shopping cart system",
-        "Created a comprehensive admin panel for product and order management",
-        "Integrated real-time data synchronization using Firebase Database",
-        "Implemented state management using Redux for optimal performance",
-        "Designed responsive UI components following mobile-first principles",
-        "Incorporated smooth animations and transitions for enhanced user experience",
-      ],
-    },
-  },
-  {
-    id: "builtdesign-blogs",
-    companyName: "Builtdesign Blogs",
-    type: "Professional",
-    category: ["Web Dev", "Full Stack", "UI/UX"],
-    shortDescription:
-      "Crafted Builtdesign's vibrant Blogs Website using Netlify CMS and React for engaging content experiences.",
-    websiteLink: "https://blog.builtdesign.in",
-    techStack: ["Next.js", "React", "Node.js", "MongoDB", "Typescript"],
-    startDate: new Date("2022-03-01"),
-    endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/builtdesign-blogs/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Blog Landing Page",
-        description:
-          "Modern and responsive landing page showcasing featured articles",
-        imgArr: ["/projects/builtdesign-blogs/blog_2.webp"],
-      },
-      {
-        title: "Blog Listing",
-        description:
-          "Organized display of all blog posts with search and filtering",
-        imgArr: ["/projects/builtdesign-blogs/blog_3.webp"],
-      },
-      {
-        title: "Category Navigation",
-        description: "Intuitive category-based navigation system",
-        imgArr: ["/projects/builtdesign-blogs/blog_1.webp"],
-      },
-      {
-        title: "Article View",
-        description:
-          "Clean and readable article layout with rich media support",
-        imgArr: [
-          "/projects/builtdesign-blogs/blog_4.webp",
-          "/projects/builtdesign-blogs/blog_5.webp",
-        ],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "As part of the Builtdesign platform, I developed a sophisticated blog website that serves as a content hub for the company's thought leadership and industry insights. The project leveraged Next.js and React to create a fast, SEO-friendly platform.",
-        "The blog platform features a modern, responsive design that prioritizes readability and user engagement. I implemented a robust content management system using Netlify CMS, enabling the content team to easily publish and manage blog posts.",
-        "The architecture includes server-side rendering for optimal performance and SEO, while MongoDB provides flexible content storage. TypeScript ensures code reliability and maintainability throughout the application.",
-        "Key features include category-based navigation, search functionality, and a rich text editor for content creation. The platform supports various content types including images, code snippets, and embedded media.",
-      ],
-      bullets: [
-        "Developed a modern blog platform using Next.js and React with TypeScript",
-        "Implemented Netlify CMS for efficient content management",
-        "Created a responsive design that prioritizes readability and user engagement",
-        "Built server-side rendering for optimal performance and SEO",
-        "Integrated MongoDB for flexible content storage and management",
-        "Developed category-based navigation and search functionality",
-        "Implemented rich text editing capabilities for content creation",
-      ],
-    },
-  },
-
-  {
-    id: "cirql-dashboard",
-    companyName: "Cirql Dashboard",
-    type: "Personal",
-    category: ["Web Dev", "Frontend", "UI/UX"],
-    shortDescription:
-      "Created a dashboard project using React and Tailwind CSS, focusing on UI design and routing implementation.",
-    websiteLink: "https://cirql-ui.namanbarkiya.xyz/",
-    techStack: ["React", "Tailwind CSS", "Google Auth"],
-    startDate: new Date("2023-01-01"),
-    endDate: new Date("2023-02-15"),
-    companyLogoImg: "/projects/cirql/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Dashboard Home",
-        description:
-          "Main dashboard view with analytics widgets and data visualization",
-        imgArr: ["/projects/cirql/web_1.png", "/projects/cirql/web_2.png"],
-      },
-      {
-        title: "Profile Page",
-        description:
-          "User profile management interface with customization options",
-        imgArr: ["/projects/cirql/web_3.png", "/projects/cirql/web_4.png"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "For the 'Cirql Dashboard' personal, I aimed to enhance my UI design skills and deepen my understanding of routing within a React application.",
-        "I utilized React and Tailwind CSS to craft an intuitive dashboard interface that provides users with an organized overview of data and functionalities. The UI components were thoughtfully designed to ensure a seamless user experience.",
-        "Incorporating Google Sign-In Authentication further fortified the project by adding a layer of security and convenience. Users are required to authenticate before accessing certain routes, ensuring the safety of sensitive information.",
-        "The routing system was meticulously implemented to enable smooth navigation between different sections of the dashboard, simulating real-world use cases.",
-        "Through this project, I've gained valuable insights into UI/UX design principles and the implementation of secure and efficient routing in React applications.",
-      ],
-      bullets: [
-        "Created a user-friendly dashboard project using React and Tailwind CSS.",
-        "Implemented Google Sign-In Authentication to ensure secure access to sensitive routes.",
-        "Designed UI components to provide an intuitive and visually pleasing experience.",
-        "Focused on implementing a smooth routing system to simulate real-world use cases.",
-        "Enhanced my skills in UI design, routing, and component architecture.",
-      ],
-    },
-  },
-  {
-    id: "inscript-hindi-typing",
-    companyName: "Inscript Hindi Typing",
-    type: "Personal",
-    category: ["Web Dev", "UI/UX"],
-    shortDescription:
-      "Developed a user-friendly website for Inscript Hindi typing, addressing the need for a simple tool for Hindi writers to convey data digitally.",
-    websiteLink: "https://hindityping.namanbarkiya.xyz",
-    githubLink: "https://github.com/namanbarkiya/inscript-hindi-keyboard",
-    techStack: ["HTML 5", "CSS 3", "Javascript"],
-    startDate: new Date("2022-05-01"),
-    endDate: new Date("2022-06-15"),
-    companyLogoImg: "/projects/hindi-keyboard/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Typing Interface",
-        description: "Minimal and user-friendly Inscript Hindi typing area",
-        imgArr: ["/projects/hindi-keyboard/web_1.png"],
-      },
-      {
-        title: "Copy and Download the file",
-        description:
-          "Export functionality allowing users to copy text or download as a document file",
-        imgArr: [
-          "/projects/hindi-keyboard/web_2.png",
-          "/projects/hindi-keyboard/web_3.png",
-        ],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "The 'Inscript Hindi Typing Website' project emerged from the need to provide a simple and accessible tool for Hindi writers, especially those in digital news and media, who wished to convey data in Hindi.",
-        "Recognizing the challenges posed by complex software in the market, I set out to create a minimalistic typing area that catered to the needs of a vast community of Hindi typists in India.",
-        "The project was designed to address the specific requirements of users familiar with the Inscript keyboard layout, mapping English and Hindi alphabets for seamless typing. The intuitive interface allowed users to effortlessly switch between languages, streamlining the process of content creation.",
-        "Leveraging HTML and CSS, I crafted the website's UI to ensure a user-friendly experience. Additionally, Local Storage was utilized to enable users to save and retrieve their work, enhancing convenience and productivity.",
-        "The website's focus on user experience and simplicity proved to be a key factor in its popularity among Hindi writers. By offering a tool that reduced the barriers to entry, I contributed to the digital empowerment of Hindi typists who previously faced challenges in conveying their message effectively.",
-        "This project marked one of my initial forays into web development and highlighted the transformative potential of technology in addressing real-world challenges.",
-      ],
-      bullets: [
-        "Developed a user-friendly website for Inscript Hindi typing.",
-        "Catered to the needs of Hindi writers in digital news and media.",
-        "Created a minimalistic and intuitive typing interface for the Inscript keyboard layout.",
-        "Mapped English and Hindi alphabets to provide a seamless typing experience.",
-        "Utilized HTML and CSS to design a user-friendly UI.",
-        "Implemented Local Storage to enable users to save and retrieve their work.",
-        "Contributed to the digital empowerment of Hindi typists by offering a simple tool.",
-        "Marked one of my first web development projects, showcasing technology's potential for addressing real-world needs.",
+        "🔄 Modular design: Mix-and-match scripts based on deployment requirements",
+        "⚡ Performance-optimized: Parallel download configuration in pacman.conf for faster package retrieval",
+        "🧭 Init-agnostic: Compatible with Artix's multiple init systems (OpenRC, dinit, runit, s6) ",
+        "🔧 Idempotent-friendly: Scripts designed for repeatable, scriptable system provisioning",
+        "📦 Zero dependencies: Pure Bash — runs in any Artix/Arch live environment without external tooling",
+        "📜 Transparent: All operations visible in-terminal; no hidden binaries or opaque installers",
       ],
     },
   },

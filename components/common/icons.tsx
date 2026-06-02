@@ -37,6 +37,7 @@ import {
 import { AiFillStar } from "react-icons/ai";
 import { BiLaugh, BiSolidUser } from "react-icons/bi";
 import { BsInfoCircle, BsQuestionCircle } from "react-icons/bs";
+import { FaJava } from "react-icons/fa";
 import {
   HiBriefcase,
   HiOutlineExternalLink,
@@ -68,8 +69,8 @@ import {
   SiTypescript,
   SiX,
 } from "react-icons/si";
-
 export const Icons = {
+  java: FaJava,
   contact: Phone,
   gitRepoIcon: BookMarked,
   gitOrgBuilding: Building,

@@ -60,7 +60,11 @@ export type ValidSkills =
   | "FastAPI"
   | "SQL"
   | "NoSQL"
-  | "Framer Motion";
+  | "Framer Motion"
+  | "Cloudflare"
+  | "Linux"
+  | "DevOps"
+  | "Shell ( Bash / Zsh )";
 
 export type ValidCategory =
   | "Full Stack"

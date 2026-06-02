@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Naman Barkiya | Applied AI Engineer",
-    short_name: "Naman Barkiya",
+    name: "Aniket Das | Full Stack Developer",
+    short_name: "Aniket Das",
     description:
-      "Naman Barkiya - Applied AI Engineer working at the intersection of AI, data, and scalable software systems.",
+      "Aniket Das - Full Stack Developer working at the intersection of AI, data, and scalable software systems.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
@@ -25,6 +25,7 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
     categories: [
       "portfolio",
+      "full stack",
       "ai",
       "software engineering",
       "machine learning",
