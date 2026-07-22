@@ -1,7 +1,7 @@
 ---
 title: "Debugging Multi-threaded Java Applications"
 date: "2026-07-22"
-description: "Deep-dive into the architecture decisions, ingestion pipelines, and hard-won lessons from building Convot — an embeddable AI chatbot that retrieves answers from your own knowledge base."
+description: "Stop chasing ghost bugs: Learn how to bring hidden background threads out of the shadows and back into your debugger."
 tags: ["Java", "Eclipse", "Debug", "Backend"]
 coverImage: "/blogs/debugging-multi-threaded-java-applications/logo.png"
 featured: true
