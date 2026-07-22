@@ -89,9 +89,9 @@ When debugging hangs or deadlocks, sometimes you can't attach a debugger in real
 
 ## Video
 
-[![Watch the video](https://img.youtube.com/vi/j0vZSsHIEQ4/maxresdefault.jpg)](https://youtu.be/j0vZSsHIEQ4)
+[![Watch the video](https://img.youtube.com/vi/cRrwgJwHt1Q/maxresdefault.jpg)](https://youtu.be/cRrwgJwHt1Q)
 
-> 🎬 **[Click here to watch the full video on YouTube](https://youtu.be/j0vZSsHIEQ4)**
+> 🎬 **[Click here to watch the full video on YouTube](https://youtu.be/cRrwgJwHt1Q)**
 
 ## Code
 
