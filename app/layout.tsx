@@ -27,6 +27,30 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
+// Build the icons metadata only from values that are actually present.
+// Empty strings would render <link href=""> and trigger React's
+// "empty string was passed to the href attribute" warning, so we omit them.
+const iconsMetadata: {
+  icon?: string;
+  shortcut?: string;
+  apple?: string;
+} = {};
+if (siteConfig.iconIco) iconsMetadata.icon = siteConfig.iconIco;
+if (siteConfig.logoIcon) iconsMetadata.shortcut = siteConfig.logoIcon;
+if (siteConfig.logoIcon) iconsMetadata.apple = siteConfig.logoIcon;
+
+// Only include OG/Twitter images when an ogImage is configured.
+const ogImages = siteConfig.ogImage
+  ? [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ]
+  : undefined;
+
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -49,34 +73,16 @@ export const metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    images: [
-      {
-        url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name,
-      },
-    ],
+    images: ogImages,
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [
-      {
-        url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name,
-      },
-    ],
+    images: ogImages,
     creator: `@${siteConfig.username}`,
   },
-  icons: {
-    icon: siteConfig.iconIco,
-    shortcut: siteConfig.logoIcon,
-    apple: siteConfig.logoIcon,
-  },
+  icons: iconsMetadata,
   manifest: `${siteConfig.url}/site.webmanifest`,
   alternates: {
     canonical: siteConfig.url,
