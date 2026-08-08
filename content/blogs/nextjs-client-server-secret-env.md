@@ -16,7 +16,7 @@ featured: true
 
 ## <a id="video"></a> Video
 
-[![Watch the video](https://img.youtube.com/vi/cRrwgJwHt1Q/maxresdefault.jpg)](https://youtu.be/cRrwgJwHt1Q)
+[![Watch the video](https://img.youtube.com/vi/TweQuRKJSO4/maxresdefault.jpg)](https://youtu.be/TweQuRKJSO4)
 
 > 🎬 **[Click here to watch the full video on YouTube](https://youtu.be/cRrwgJwHt1Q)**
 
