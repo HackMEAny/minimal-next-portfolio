@@ -7,25 +7,6 @@ coverImage: "/blogs/java-pki-crisis/logo.png"
 featured: true
 ---
 
-## 📑 Table of Contents
-
-- [Executive Summary (TL;DR)](#executive-summary)
-- [1. Vulnerability Profile & Metadata](#vulnerability-profile)
-- [2. Affected vs. Patched Versions](#affected-versions)
-- [3. Technical Root Cause: Anatomy of a Trust Collapse](#technical-root-cause)
-  - [Why the Flaw Exists](#why-the-flaw-exists)
-- [4. Exploitation Breakdown: Man-in-the-Middle (MitM)](#exploitation-breakdown)
-  - [End-to-End Scenario: Payment Gateway Interception](#payment-interception-scenario)
-  - [The Attack Steps](#the-attack-steps)
-- [5. Remediation & Immediate Workarounds](#remediation-and-workarounds)
-  - [Option 1: Official Patch (Recommended & Definitive)](#option-1-official-patch)
-  - [Option 2: Emergency Keystore Purge (Workaround)](#option-2-keystore-purge)
-  - [Option 3: Enforce Strict Revocation Checks at Runtime](#option-3-strict-revocation)
-- [6. Engineering Action Checklist](#engineering-action-checklist)
-- [Join the Discussion](#join-the-discussion)
-
----
-
 <a id="executive-summary"></a>
 
 ## Executive Summary (TL;DR)
@@ -35,8 +16,6 @@ featured: true
 > - **The Root Cause:** Private keys of several eMudhra intermediate Certificate Authorities (CAs) were compromised due to insufficient cryptographic entropy during key generation. Because the parent eMudhra Root CAs are trusted by default in Java's `cacerts` store, an attacker holding these keys can forge valid TLS/HTTPS certificates for arbitrary domains.
 > - **The Real-World Impact:** Unauthenticated Man-in-the-Middle (MitM) attacks against outbound Java HTTPS/TLS connections, complete loss of data confidentiality and integrity, and potential forged signed JAR distribution.
 > - **Action Required:** Immediately upgrade runtimes to patched releases (e.g., JDK 17.0.22+, 21.0.14+) or execute manual removal of the four affected root aliases from your `$JAVA_HOME/lib/security/cacerts` keystore.
-
-[Back to Top ↑](#table-of-contents)
 
 ---
 
@@ -53,8 +32,6 @@ featured: true
 | **Affected Component**                | Java Secure Socket Extension (JSSE)                                                                    |
 | **Attack Vector**                     | Network (Adjacent/Remote via on-path routing or spoofing)                                              |
 | **Authentication / User Interaction** | None required (`PR:N`, `UI:N`)                                                                         |
-
-[Back to Top ↑](#table-of-contents)
 
 ---
 
@@ -73,8 +50,6 @@ The issue impacts active Long-Term Support (LTS) releases, legacy deployments, a
 | **Oracle Java SE 25 / 27**     | `25.0.5.0.2`, `27.0.1.0.2` (and earlier)    | **25.0.6 / 27.0.2**                |
 | **Oracle GraalVM for JDK**     | `17.0.21.0.2`, `21.0.13.0.2`                | Corresponding patched JDK baseline |
 | **GraalVM Enterprise Edition** | `21.3.20.0.2`                               | Latest maintenance update          |
-
-[Back to Top ↑](#table-of-contents)
 
 ---
 
@@ -113,8 +88,6 @@ Unlike conventional memory corruption bugs (such as buffer overflows or out-of-b
 3. **The Revocation Blind Spot:** By default, standard Java JSSE implementations (including `HttpsURLConnection`, Spring `RestTemplate`/`WebClient`, Apache HttpClient, and OkHttp) **do not perform dynamic revocation checking** (OCSP or CRL) unless explicitly instructed via JVM startup flags.
 4. **Validation Acceptance:** Because the forged leaf certificate presents a cryptographically valid chain terminating at a trusted eMudhra root inside `cacerts`, Java completes the TLS handshake without throwing an `SSLHandshakeException`.
 
-[Back to Top ↑](#table-of-contents)
-
 ---
 
 <a id="exploitation-breakdown"></a>
@@ -150,8 +123,6 @@ HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.o
 2. **Dynamic Impersonation:** When the Java service initiates the TLS handshake with `api.payments.com`, the attacker intercepts the connection and serves an on-the-fly certificate for `api.payments.com` signed by the compromised eMudhra Sub-CA.
 3. **Handshake Completion:** The Java JSSE engine validates the chain against `emsignrootcag1` in `cacerts`. Finding the certificate chain mathematically sound, it negotiates TLS session keys directly with the attacker.
 4. **Data Exfiltration and Tampering:** The attacker decrypts authorization bearer tokens and payment details in real time, alters the destination account number, and relays the request to the authentic endpoint.
-
-[Back to Top ↑](#table-of-contents)
 
 ---
 
@@ -199,8 +170,6 @@ java -Dcom.sun.security.enableCRLDP=true \
 
 > ⚠️ **Operational Note:** Enabling strict revocation checking incurs minor latency during cold-start TLS handshakes and requires your application containers to have egress network connectivity to public CA revocation endpoints.
 
-[Back to Top ↑](#table-of-contents)
-
 ---
 
 <a id="engineering-action-checklist"></a>
@@ -210,8 +179,6 @@ java -Dcom.sun.security.enableCRLDP=true \
 - [ ] **Audit Base Images:** Update all container base images (`eclipse-temurin`, `amazoncorretto`, `openjdk`, `distroless`) to their latest patch versions.
 - [ ] **Inspect In-Flight Truststores:** Review custom keystores created across your services to verify whether they were originally duplicated from unpatched `cacerts` files.
 - [ ] **Review Code Signing Procedures:** If your organization relies on signed JAR verification, run `jarsigner -verify -revcheck -strict <artifact.jar>` to enforce strict revocation on distribution artifacts.
-
-[Back to Top ↑](#table-of-contents)
 
 ---
 
