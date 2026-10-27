@@ -32,17 +32,6 @@ You’ll get:
 
 ---
 
-## 📌 Table of Contents
-
-1. [⚡ Angular 14 vs 20 at a Glance](#glance)
-2. [🧠 The Big Mental Model Shift](#mental-model)
-3. [🗓 What Changed, Version by Version](#timeline)
-4. [🔥 The 10 Changes That Matter Most](#top-changes)
-5. [🧰 Migration Schematics: Automate the Boring Parts](#schematics)
-6. [🧪 Mini Demo: Old Angular vs Modern Angular](#demo)
-7. [⚠️ Pitfalls That Bite Teams](#pitfalls)
-8. [🧾 Final Summary](#summary)
-
 ---
 
 <a id="glance"></a>
