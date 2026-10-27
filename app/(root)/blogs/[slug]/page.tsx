@@ -4,6 +4,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 
+import { BlogArticleWrapper } from "@/components/blogs/blog-article-wrapper";
+import { DesktopTableOfContents } from "@/components/blogs/desktop-table-of-contents";
+import { MobileTableOfContents } from "@/components/blogs/mobile-table-of-contents";
+import { ReadingProgressBar } from "@/components/blogs/reading-progress-bar";
 import { AnimatedSection } from "@/components/common/animated-section";
 import { AnimatedText } from "@/components/common/animated-text";
 import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
@@ -163,8 +167,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     ],
   };
 
+  const hasToc = Boolean(post.toc && post.toc.length > 0);
+
   return (
     <ClientPageWrapper>
+      <ReadingProgressBar />
       <Script
         id="schema-blog-post"
         type="application/ld+json"
@@ -176,7 +183,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 py-8">
+      <article
+        className={cn(
+          "mx-auto px-4 sm:px-6 py-8",
+          hasToc ? "max-w-6xl" : "max-w-3xl"
+        )}
+      >
         {/* Breadcrumb nav (visible, accessible) */}
         <AnimatedText delay={0}>
           <nav aria-label="Breadcrumb" className="mb-6">
@@ -214,79 +226,107 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </AnimatedText>
 
         {/* Header */}
-        <AnimatedSection direction="up">
-          <header className="mb-8">
-            {/* Tags as keywords */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {post.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-primary/10 text-primary border border-primary/20"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+        <header className="mb-8">
+          {/* Tags as keywords */}
+          <div className="flex flex-wrap gap-2 mb-4">
+            {post.tags.map((tag) => (
+              <span
+                key={tag}
+                className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-primary/10 text-primary border border-primary/20"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
 
-            {/* H1 title — single h1 per page */}
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl leading-tight text-foreground mb-4">
-              {post.title}
-            </h1>
+          {/* H1 title — single h1 per page */}
+          <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl leading-tight text-foreground mb-4">
+            {post.title}
+          </h1>
 
-            {/* Description as lead paragraph */}
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              {post.description}
-            </p>
+          {/* Description as lead paragraph */}
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            {post.description}
+          </p>
 
-            {/* Author + date + reading time */}
-            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pb-6 border-b border-border">
-              <address className="flex items-center gap-1.5 not-italic">
-                <Icons.user className="w-4 h-4" />
-                <a
-                  rel="author"
-                  href={siteConfig.url}
-                  className="hover:text-foreground transition-colors"
-                >
-                  {siteConfig.authorName}
-                </a>
-              </address>
-              <time dateTime={isoDate} className="flex items-center gap-1.5">
-                <Icons.calendar className="w-4 h-4" />
-                {formattedDate}
-              </time>
-              {post.readingTime && (
-                <span className="flex items-center gap-1.5">
-                  <Icons.clock className="w-4 h-4" />
-                  {post.readingTime} min read
-                </span>
+          {/* Author + date + reading time */}
+          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pb-6 border-b border-border">
+            <address className="flex items-center gap-1.5 not-italic">
+              <Icons.user className="w-4 h-4" />
+              <a
+                rel="author"
+                href={siteConfig.url}
+                className="hover:text-foreground transition-colors"
+              >
+                {siteConfig.authorName}
+              </a>
+            </address>
+            <time dateTime={isoDate} className="flex items-center gap-1.5">
+              <Icons.calendar className="w-4 h-4" />
+              {formattedDate}
+            </time>
+            {post.readingTime && (
+              <span className="flex items-center gap-1.5">
+                <Icons.clock className="w-4 h-4" />
+                {post.readingTime} min read
+              </span>
+            )}
+          </div>
+        </header>
+
+        {/* Mobile Table of Contents */}
+        <MobileTableOfContents toc={post.toc} />
+
+        {/* Main Content Layout */}
+        {hasToc ? (
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8 lg:gap-12">
+            <div className="min-w-0 w-full">
+              {post.coverImage && (
+                <figure className="mb-10">
+                  <Image
+                    src={post.coverImage}
+                    alt={post.title}
+                    width={768}
+                    height={400}
+                    className="w-full h-auto rounded-lg border border-border object-cover"
+                    priority
+                  />
+                </figure>
               )}
+
+              <BlogArticleWrapper>
+                <section
+                  className="blog-content"
+                  dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+                />
+              </BlogArticleWrapper>
             </div>
-          </header>
-        </AnimatedSection>
 
-        {/* Cover image (if exists) */}
-        {post.coverImage && (
-          <AnimatedSection direction="up" delay={0.05}>
-            <figure className="mb-10">
-              <Image
-                src={post.coverImage}
-                alt={post.title}
-                width={768}
-                height={400}
-                className="w-full h-auto rounded-lg border border-border object-cover"
-                priority
+            <DesktopTableOfContents toc={post.toc} />
+          </div>
+        ) : (
+          <div className="min-w-0 w-full">
+            {post.coverImage && (
+              <figure className="mb-10">
+                <Image
+                  src={post.coverImage}
+                  alt={post.title}
+                  width={768}
+                  height={400}
+                  className="w-full h-auto rounded-lg border border-border object-cover"
+                  priority
+                />
+              </figure>
+            )}
+
+            <BlogArticleWrapper>
+              <section
+                className="blog-content"
+                dangerouslySetInnerHTML={{ __html: post.contentHtml }}
               />
-            </figure>
-          </AnimatedSection>
+            </BlogArticleWrapper>
+          </div>
         )}
-
-        {/* Markdown content wrapped in semantic section */}
-        <AnimatedSection direction="up" delay={0.1}>
-          <section
-            className="blog-content"
-            dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-          />
-        </AnimatedSection>
 
         {/* Footer nav */}
         <AnimatedSection

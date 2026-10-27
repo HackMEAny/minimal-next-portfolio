@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // productionBrowserSourceMaps: true,
+  productionBrowserSourceMaps: false,
+  experimental: {
+    cpus: 4,
+  },
   async headers() {
     return [
       {

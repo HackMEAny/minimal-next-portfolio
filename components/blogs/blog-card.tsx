@@ -20,19 +20,18 @@ export default function BlogCard({ blog }: BlogCardProps) {
   return (
     <Link
       href={`/blogs/${blog.slug}`}
-      className="group relative flex flex-col bg-background border border-border rounded-lg overflow-hidden h-full transition-all duration-300 hover:shadow-lg hover:border-primary/40 hover:-translate-y-0.5"
+      className="group relative flex flex-col bg-card text-card-foreground border border-border rounded-xl overflow-hidden h-full transition-all duration-200 ease-out hover:shadow-md hover:border-primary/40 hover:-translate-y-0.5"
     >
       <article className="flex flex-col h-full">
         {/* Cover image */}
         {blog.coverImage && (
-          <div className="relative w-full h-[180px] flex-shrink-0 overflow-hidden bg-muted">
+          <div className="relative w-full h-[180px] flex-shrink-0 overflow-hidden bg-muted border-b border-border/40">
             <Image
               src={blog.coverImage}
               alt={blog.title}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
           </div>
         )}
 

@@ -134,15 +134,10 @@ export default function BlogsPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-2">
-            {blogs.map((blog, index) => (
-              <AnimatedSection
-                key={blog.slug}
-                delay={0.05 * index}
-                direction="up"
-                className="h-full"
-              >
+            {blogs.map((blog) => (
+              <div key={blog.slug} className="h-full">
                 <BlogCard blog={blog} />
-              </AnimatedSection>
+              </div>
             ))}
           </div>
         )}
