@@ -32,15 +32,6 @@ featured: true
 - **Part 3** — The hands-on demo, including a **Live Demo: Watch a Client-Side Secret Leak** 🚨
 - **Bonus** — Myth vs. Fact table & the Golden Rules cheat sheet
 
-### 🗺️ Table of Contents
-
-**Quick links:** [🎬 Video](#video) · [📋 Code](#code)
-
-1. [Part 1: The Two Worlds of Next.js](#toc-part-1)
-2. [Part 2: Client-Side Secrets Are Visible — Server-Side Secrets Are Not](#toc-part-2)
-3. [Part 3: The Hands-On Demo](#toc-part-3)
-4. [Golden Rules Cheat Sheet](#toc-golden-rules)
-
 ---
 
 ## <a id="toc-part-1"></a> Part 1: The Two Worlds of Next.js 🌗
